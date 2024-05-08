@@ -1,0 +1,5 @@
+functions-framework==3.*
+google-auth
+pandas
+google-api-python-client
+tweepy
