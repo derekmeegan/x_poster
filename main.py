@@ -47,12 +47,12 @@ def today_is_trading_day():
         'apikey': FINANCE_API_KEY
     }
     response = requests.get(url, params=params)
-    holidays = e = json.loads(response.text).get('stockMarketHolidays')[-1].values()
+    holidays = json.loads(response.text).get('stockMarketHolidays')[-1].values()
 
     today = datetime.now()
     date_string = today.strftime('%Y-%m-%d')
 
-    return today.weekday() < 5 and date_string not in e
+    return today.weekday() < 5 and date_string not in holidays
 
 @functions_framework.cloud_event
 def post(request):
