@@ -90,11 +90,16 @@ jobs:
           # NOTE: If required, update to the appropriate source folder
           source: ./
           secrets: |-
-            X_ACCESS_TOKEN=X_ACCESS_TOKEN:1
-            X_ACCESS_TOKEN_SECRET=X_ACCESS_TOKEN_SECRET:1
-            X_CONSUMER_KEY=X_CONSUMER_KEY:1
-            X_CONSUMER_SECRET=X_CONSUMER_SECRET:1
-            FINANCE_API_KEY=FINANCE_API_KEY:1
+            # X_ACCESS_TOKEN=X_ACCESS_TOKEN:1
+            # X_ACCESS_TOKEN_SECRET=X_ACCESS_TOKEN_SECRET:1
+            # X_CONSUMER_KEY=X_CONSUMER_KEY:1
+            # X_CONSUMER_SECRET=X_CONSUMER_SECRET:1
+            # FINANCE_API_KEY=FINANCE_API_KEY:1
+            X_ACCESS_TOKEN=projects/${{ env.PROJECT_ID }}/secrets/X_ACCESS_TOKEN:1
+            X_ACCESS_TOKEN_SECRET=projects/${{ env.PROJECT_ID }}/secrets/X_ACCESS_TOKEN_SECRET:1
+            X_CONSUMER_KEY=projects/${{ env.PROJECT_ID }}/secrets/X_CONSUMER_KEY:1
+            X_CONSUMER_SECRET=projects/${{ env.PROJECT_ID }}/secrets/X_CONSUMER_SECRET:1
+            FINANCE_API_KEY=projects/${{ env.PROJECT_ID }}/secrets/FINANCE_API_KEY:1
 
       # If required, use the Cloud Run url output in later steps
       - name: Show Output
