@@ -51,7 +51,7 @@ on:
     branches: [ "main" ]
 
 env:
-  PROJECT_ID: nonprod1-svc-pd7p # TODO: update Google Cloud project id
+  PROJECT_ID: ${{ secrets.PROJECT_NUMBER }} # TODO: update Google Cloud project id
   SERVICE: post-daily-on-x # TODO: update Cloud Run service name
   REGION: us-central1 # TODO: update Cloud Run service region
 
@@ -90,11 +90,11 @@ jobs:
           # NOTE: If required, update to the appropriate source folder
           source: ./
           secrets: |-
-            X_ACCESS_TOKEN=projects/${{ secrets.PROJECT_NUMBER }}/secrets/X_ACCESS_TOKEN:1
-            X_ACCESS_TOKEN_SECRET=projects/${{ secrets.PROJECT_NUMBER }}/secrets/X_ACCESS_TOKEN_SECRET:1
-            X_CONSUMER_KEY=projects/${{ secrets.PROJECT_NUMBER }}/secrets/X_CONSUMER_KEY:1
-            X_CONSUMER_SECRET=projects/${{ secrets.PROJECT_NUMBER }}/secrets/X_CONSUMER_SECRET:1
-            FINANCE_API_KEY=projects/${{ secrets.PROJECT_NUMBER }}/secrets/FINANCE_API_KEY:1
+            X_ACCESS_TOKEN=X_ACCESS_TOKEN:1
+            X_ACCESS_TOKEN_SECRET=X_ACCESS_TOKEN_SECRET:1
+            X_CONSUMER_KEY=X_CONSUMER_KEY:1
+            X_CONSUMER_SECRET=X_CONSUMER_SECRET:1
+            FINANCE_API_KEY=FINANCE_API_KEY:1
 
       # If required, use the Cloud Run url output in later steps
       - name: Show Output
