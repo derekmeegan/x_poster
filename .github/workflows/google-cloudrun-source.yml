@@ -86,6 +86,7 @@ jobs:
         uses: google-github-actions/deploy-cloudrun@v2
         with:
           service: ${{ env.SERVICE }}
+          project_id: ${{ env.PROJECT_ID }}
           # NOTE: If required, update to the appropriate source folder
           source: ./
           secrets: |-
