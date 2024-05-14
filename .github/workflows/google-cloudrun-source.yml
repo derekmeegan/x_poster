@@ -90,14 +90,8 @@ jobs:
           # NOTE: If required, update to the appropriate source folder
           source: ./
           secrets: |-
-            # X_ACCESS_TOKEN=X_ACCESS_TOKEN:1
-            # X_ACCESS_TOKEN_SECRET=X_ACCESS_TOKEN_SECRET:1
-            # X_CONSUMER_KEY=X_CONSUMER_KEY:1
-            # X_CONSUMER_SECRET=X_CONSUMER_SECRET:1
-            # FINANCE_API_KEY=FINANCE_API_KEY:1
             X_ACCESS_TOKEN=X_ACCESS_TOKEN:1
             X_ACCESS_TOKEN_SECRET=X_ACCESS_TOKEN_SECRET:1
-            # X_CONSUMER_KEY=X_CONSUMER_KEY:1
             X_CONSUMER_SECRET=X_CONSUMER_SECRET:1
             FINANCE_API_KEY=FINANCE_API_KEY:1
 
