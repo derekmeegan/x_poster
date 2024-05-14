@@ -91,11 +91,11 @@ jobs:
           source: ./
           secrets: |-
             # As an environment variable:
-            X_ACCESS_TOKEN=X_ACCESS_TOKEN:1
-            X_ACCESS_TOKEN_SECRET=X_ACCESS_TOKEN_SECRET:1
-            X_CONSUMER_KEY=X_CONSUMER_KEY:1
-            X_CONSUMER_SECRET=X_CONSUMER_SECRET:1
-            FINANCE_API_KEY=FINANCE_API_KEY:1
+            X_ACCESS_TOKEN=X_ACCESS_TOKEN:latest
+            X_ACCESS_TOKEN_SECRET=X_ACCESS_TOKEN_SECRET:latest
+            X_CONSUMER_KEY=X_CONSUMER_KEY:latest
+            X_CONSUMER_SECRET=X_CONSUMER_SECRET:latest
+            FINANCE_API_KEY=FINANCE_API_KEY:latest
 
       # If required, use the Cloud Run url output in later steps
       - name: Show Output
