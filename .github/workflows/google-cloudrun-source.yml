@@ -51,7 +51,7 @@ on:
     branches: [ "main" ]
 
 env:
-  PROJECT_ID: ${{ secrets.PROJECT_NUMBER }} # TODO: update Google Cloud project id
+  PROJECT_ID: nonprod1-svc-pd7p # TODO: update Google Cloud project id
   SERVICE: post-daily-on-x # TODO: update Cloud Run service name
   REGION: us-central1 # TODO: update Cloud Run service region
 
